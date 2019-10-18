@@ -30,8 +30,6 @@ def download(imaga, lock):
     try:
         page=urllib.request.urlopen(imaga) 
         print(str(current_process().name + ' image  ' + imaga )) #7
-
-
     except:        
         print('error download')
     finally:
@@ -39,8 +37,6 @@ def download(imaga, lock):
         lock.release()
 
 if __name__=='__main__':
-
-
     url = input()
     pisk = re.compile(r'<\s*?img.+?src="\s*?(http\S+)\s*?"', re.IGNORECASE)
     srcs = []
